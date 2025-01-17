@@ -1,14 +1,102 @@
-html {
-	font-size: 1.3rem;
-	font-family: "Roboto", sans-serif;
+body {
 	margin: 0;
+	padding: 0;
 }
 
-.card {
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
+#search-input,
+#search-form button {
+	padding: 10px 20px;
+	font-size: 1rem;
+	border: 2px solid #ddd;
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	outline: none;
+	background-color: #f9f9f9;
+	color: #333;
+	cursor: pointer;
 }
-.card img {
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+
+#search-input:focus,
+#search-form button:focus {
+	border-color: #007bff;
+	background-color: #fff;
+	box-shadow: 0 0 70px rgba(59, 60, 61, 0.4);
+	transform: scale(1.05);
+}
+
+#search-form button {
+	background-color: #f9f9f9;
+	border-color: #ddd;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+#search-form button:hover {
+	background-color: #007bff;
+	border-color: #fff;
+	color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+	transform: translate(-10px);
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	color: #333;
+	cursor: pointer;
+}
+
+h1::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, #ff6b6b, #f7a8b8, #6b9fff, #6bf7b8);
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+h1:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.animated-title {
+	font-size: 3rem;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	color: #333;
+}
+
+.animated-title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, #ff6b6b, #f7a8b8, #6b9fff, #6bf7b8);
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.animated-title:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+div.card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.card:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
 }

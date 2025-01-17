@@ -6,7 +6,7 @@ function createMovieCard(movie) {
 				<h5 class="card-title">${movie.Title}</h5>
 				<p class="card-text">Année : ${movie.Year}</p>
 				<p>
-					<a class="btn btn-primary" data-bs-toggle="collapse" href="#movie-type" role="button" aria-expanded="false" aria-controls="collapseMovie">
+					<a class="btn btn-primary" data-bs-toggle="collapse" href="#movie-type" role="button" aria-expanded="true" aria-controls="collapseMovie">
 						More info 
 					</a>
 				</p>
